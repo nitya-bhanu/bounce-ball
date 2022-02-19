@@ -1,0 +1,99 @@
+body{
+    background-color: black;
+    overflow: hidden;
+}
+.ball{
+    border-radius: 100%;
+    background-color: aquamarine;
+    height: 3.5vw;;
+    width: 3.5vw;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 8vw;
+}
+
+.movingobstacles{
+    width:6.5vw;
+    height:6.5vw;
+    background-color: brown;
+    right: -10vw;
+    bottom: 0%;
+    position: absolute;
+}
+.movingobstacles2{
+    width:6.5vw;
+    height:6.5vw;
+    background-color: brown;
+    right: -27vw;
+    bottom: 0%;
+    position: absolute;
+}
+.movingobstacles3{
+    width:6.5vw;
+    height:6.5vw;
+    background-color: brown;
+    margin-left: 90vw;
+    bottom: 0%;
+    position: absolute;
+}
+.options{
+    display: flex;
+    font-size: 1.8vh;
+    text-align: center;
+    margin-left: 13vw;
+    margin-top: 5vh;
+    height: 7vh;
+}
+.play,.pause,.restart{
+    width:4vw;
+    color: aqua;
+    border: 2px solid;
+    margin-left: 14vw;
+    padding: 1%;
+    text-align: center;
+}
+.play:hover{
+    cursor: pointer;
+    width: 4vw;
+    transition-duration: 1s;
+    font-size: 2.2vh;
+}
+.pause:hover{
+    cursor: pointer;
+    width: 4vw;
+    transition-duration: 1s;
+    font-size: 2.2vh;
+}
+.restart:hover{
+    cursor: pointer;
+    width: 4vw;
+    transition-duration: 1s;
+    font-size: 2.2vh;
+}
+
+
+.high_score{
+    width: 39vw;
+    height:25vh;
+    margin-top: 8vh;
+    margin-left: 29vw;
+    border: 5px solid rgb(42, 128, 128);
+    color: aqua;
+    font-size: 4vh;
+    text-align: center;
+}
+
+.high_score p{
+    margin: 0px;
+    padding: 0%;
+}
+p.message{
+    margin-top: 2vh;
+    font-size: 6vh;
+}
+p.score{
+    margin-top: 2vh;
+}
+p.timeelapsed{
+    margin-top: 1vh;
+}
