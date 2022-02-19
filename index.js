@@ -55,7 +55,7 @@ document.querySelector('.pause').addEventListener('click', function () {
   
   function incrementScore() {
       update += 1;
-      el.innerText = "You have been here for " + update + " seconds.";
+      el.innerText = "TIme Elapsed: " + update + " seconds.";
   }
   var cancel = setInterval(incrementScore, 1000);
 
