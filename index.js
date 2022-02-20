@@ -1,8 +1,27 @@
-var animation;
+anime({
+  targets: ".ball",
+  keyframes: [
+    {bottom:300},
+    {bottom:0},
+    {bottom:200},
+    {bottom:0},
+    {bottom:100},
+    {bottom:0},
+    {bottom:50},
+    {bottom:0},
+    {bottom:25},
+    {bottom:0}
+  ],
+  duration: 2000,
+  easing: "easeOutSine",
+  loop:"false"
+});
+
+
 document.getElementById("bl").addEventListener("click", function () {
   anime({
     targets: ".ball",
-   bottom: 250,
+    bottom: 250,
     direction: "alternate",
     easing: 'easeOutSine',
     duration: "400",
