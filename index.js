@@ -21,7 +21,7 @@ anime({
 document.getElementById("bl").addEventListener("click", function () {
   anime({
     targets: ".ball",
-    bottom: 290,
+    bottom: 320,
     direction: "alternate",
     easing: 'easeOutSine',
     duration: "400",
