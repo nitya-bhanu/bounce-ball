@@ -2,9 +2,9 @@ var animation;
 document.getElementById("bl").addEventListener("click", function () {
   anime({
     targets: ".ball",
-    bottom: 250,
+   bottom: 250,
     direction: "alternate",
-    easing: "linear",
+    easing: 'easeOutSine',
     duration: "400",
   });
 });
