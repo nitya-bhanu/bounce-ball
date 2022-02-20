@@ -2,7 +2,7 @@ var animation;
 document.getElementById("bl").addEventListener("click", function () {
   anime({
     targets: ".ball",
-    bottom: 300,
+    bottom: 250,
     direction: "alternate",
     easing: "linear",
     duration: "400",
