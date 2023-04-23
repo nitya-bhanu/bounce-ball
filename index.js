@@ -91,7 +91,27 @@ function incrementScore() {
 }
 var cancel = setInterval(incrementScore, 1000);
 
-window.setInterval(getOffsets, 10);
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+console.log(params.user);
+const username = params.user
+
+const url = "https://scaredaccomplishedapplications.nityabhanu.repl.co";
+      function updateScore(varscore) {
+        const user = {
+          name: username,
+          EyeHandCoordination: varscore
+        };
+        axios
+          .post(url + "/player/update", user)
+          .then((response) => {
+            console.log(response.data);
+            // window.open("https://nitya-bhanu.github.io/bounce-ball/", "_self");
+          })
+          .catch((error) => console.error(error));
+      }
+
+const playgame = window.setInterval(getOffsets, 10);
 function getOffsets() {
   var ballpos = document.querySelector(".ball");
   var box1pos = document.querySelector(".movingobstacles");
@@ -112,6 +132,9 @@ function getOffsets() {
     // endGameSound.loop=false;
     document.querySelector(".pause").click();
     document.getElementById("msg").innerHTML = "Game Over";
+    console.log(update);
+    updateScore(update)
+    clearInterval(playgame)
   } else if (
     box2pos.offsetLeft + box2pos.offsetWidth >= ballpos.offsetLeft &&
     box2pos.offsetLeft + box2pos.offsetWidth <=
@@ -121,6 +144,7 @@ function getOffsets() {
     // document.querySelector('.movingobstacles') = animation1.pause;
     // document.querySelector('.movingobstacles2') = animation2.pause;
     endGameSound.play();
+
     // endGameSound.loop=false;
     document.querySelector(".pause").click();
     document.getElementById("msg").innerHTML = "Game Over";
