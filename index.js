@@ -106,7 +106,7 @@ const url = "https://scaredaccomplishedapplications.nityabhanu.repl.co";
           .post(url + "/player/update", user)
           .then((response) => {
             console.log(response.data);
-            // window.open("https://nitya-bhanu.github.io/bounce-ball/", "_self");
+            window.open("https://nitya-bhanu.github.io/elitmusFrontEnd/clue1.html?user="+username, "_self");
           })
           .catch((error) => console.error(error));
       }
