@@ -87,7 +87,7 @@ var el = document.getElementById("time");
 
 function incrementScore() {
   update += 1;
-  el.innerText = "You have been here for " + update + " seconds.";
+  el.innerText = "Click on ball jump around \n You have been here for " + update + " seconds.";
 }
 var cancel = setInterval(incrementScore, 1000);
 
